@@ -9,9 +9,18 @@ nr_letters= int(input("How many letters would you like in your password?\n"))
 nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
+easy_pwd = ""
 #Eazy Level - Order not randomised:
 #e.g. 4 letter, 2 symbol, 2 number = JduE&!91
+for i in range (nr_letters):
+  easy_pwd += random.choice(letters)
 
+for i in range (nr_symbols):
+  easy_pwd += random.choice(symbols)
 
+for i in range (nr_numbers):
+  easy_pwd += random.choice(numbers)
+
+print("Your easy password is: " + easy_pwd)
 #Hard Level - Order of characters randomised:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
